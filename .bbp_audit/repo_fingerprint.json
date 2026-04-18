@@ -1,0 +1,54 @@
+{
+  "timestamp_utc": "2026-04-18T02:42:24Z",
+  "commit": "61252aa00baf608eea00c1259816a0e8b2188718",
+  "default_branch": "unknown",
+  "current_branch": "work",
+  "languages": [
+    "PHP",
+    "JavaScript",
+    "TypeScript",
+    "Vue",
+    "Twig"
+  ],
+  "frameworks": [
+    "Matomo (custom MVC)",
+    "Twig",
+    "Vue 3"
+  ],
+  "package_managers": [
+    "composer",
+    "npm"
+  ],
+  "dependency_manifests": [
+    "composer.json",
+    "composer.lock",
+    "package.json",
+    "package-lock.json"
+  ],
+  "infra_files": [
+    ".github/workflows/matomo-tests.yml",
+    ".github/workflows/phpstan.yml"
+  ],
+  "network_entry_points": [
+    "index.php",
+    "matomo.php",
+    "piwik.php",
+    "console"
+  ],
+  "auth_modules": [
+    "core/Access.php",
+    "core/API/Request.php",
+    "core/Plugin/Controller.php",
+    "core/Nonce.php",
+    "core/FrontController.php"
+  ],
+  "hotspot_hashes": {
+    "core/API/Request.php": "f35860ab5ed6a67547a39eae6dc85966c10892ae19fddca412f0eb8203596815",
+    "core/Plugin/Controller.php": "e274104a997189b2a9a33f4dc7bb085a1b0e0ffbe5f600e2d3ea0f5f185b64e5",
+    "core/Nonce.php": "142f6b084e0cff64c9f799bc02916059c521793d2edf0d5267eebdb7654a776a",
+    "plugins/GeoIp2/Controller.php": "0b29a8e0505462ab19cb745614a551eae23550e535ff9fcfe55275cdba18d411",
+    "plugins/GeoIp2/GeoIP2AutoUpdater.php": "8f6272c6783ce7ecfeef23c33aacff1a3550171051f46226b51d7bcde1886cf8",
+    "index.php": "217f968ed831c0a7c0817e1b0e4b4d2001749b6773526f47e46ded24ace399dd",
+    "matomo.php": "d77efd3de041050fdb0de85fab57a1cc4bc7bb3a5181e20c6a44f4ffa08ffd50"
+  }
+}

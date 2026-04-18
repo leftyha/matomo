@@ -1,0 +1,51 @@
+{
+  "run_timestamp_utc": "2026-04-18T02:42:24Z",
+  "http_entrypoints": [
+    {
+      "path": "index.php",
+      "type": "front-controller"
+    },
+    {
+      "path": "matomo.php",
+      "type": "tracker-endpoint"
+    },
+    {
+      "path": "piwik.php",
+      "type": "legacy-tracker-endpoint"
+    }
+  ],
+  "audited_components": [
+    {
+      "component": "API auth token handling",
+      "files": [
+        "core/API/Request.php",
+        "core/FrontController.php"
+      ]
+    },
+    {
+      "component": "Controller CSRF checks",
+      "files": [
+        "core/Plugin/Controller.php",
+        "core/Nonce.php"
+      ]
+    },
+    {
+      "component": "GeoIP updater download flow",
+      "files": [
+        "plugins/GeoIp2/Controller.php",
+        "plugins/GeoIp2/GeoIP2AutoUpdater.php"
+      ]
+    }
+  ],
+  "sinks_reviewed": [
+    "Http::downloadChunk",
+    "Option::set/Option::get",
+    "unlink",
+    "GeoIP2AutoUpdater::unzipDownloadedFile"
+  ],
+  "coverage_gaps": [
+    "plugin ecosystem-wide controller audit",
+    "CLI command argument sink review",
+    "CI workflow secret-handling review"
+  ]
+}
